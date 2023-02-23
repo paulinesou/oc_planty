@@ -1,3 +1,8 @@
+/* Mise en page de mon onglet Admin */
+.menu-item-477{
+	order: 3;
+}
+
 /* Mise en page du bouton formulaire page "nous rencontrer" */
 .button-contact{
     text-align: center;
@@ -21,6 +26,25 @@
 input[type=number] {
   width : 51px;
   height : 54px;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+ 
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
 }
 
 .selecteur p {
@@ -52,35 +76,39 @@ input[placeholder] {
 	background-color: #DC9F96;
 }
 
-#zero{
-	border-radius: 5px 0px 0px 5px;
+.zero{
+	border-radius: 5px 0px 0px 5px !important;
 
 }
 
-#plus {
-	border-radius: 0px 5px 0px 0px;
-	border-bottom: solid 2px white;
+.plus{
+	border-radius: 0px 5px 0px 0px !important;
+	border-bottom: solid 2px white !important;
 }
 
-#moins{
-	border-radius: 0px 0px 5px 0px;
+.moins{
+	border-radius: 0px 0px 5px 0px !important;
+	margin-top: -10px !important;
 }
 
 /* Mise en page du formulaire page "commander" */
-#formulaire-responsive {
+
+/* #formulaire-responsive {
 	max-width:600px;
 	margin:0 auto;
         width:100%;
-}
+} */
+
 .rang-form {
 	width: 100%;
 }
 .demi-colonne, .colonne {
+	display: flex;
+	justify-content: center;
 	float: left;
-	position: relative;
-	padding: 0.65rem;
-	width:100%; /*a voir si on laisse ce paramètre */
+	width:100%;
 	color: white;
+	font-size: 20px;
 }
 
 .colonne{
@@ -95,6 +123,7 @@ input[placeholder] {
 
 .wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
 	display: flex;
+	height: 70px;
 	width: 380px;
 	padding: 8px;
 	border-radius: 7px;
@@ -108,9 +137,17 @@ input[placeholder] {
 	background-color: #c02e43;
 }
 
-/**---------------- Media query formulaire page "commander" ----------------**/
+/* Media query formulaire page "commander" */
 @media only screen and (min-width: 48em) { 
 	.demi-colonne {
 		width: 50%;
 	}
 }
+
+/* Média query global */
+@media screen and (max-width: 1000px) {
+	.elementor-column-gap-default{
+		display: flex;
+		flex-direction: column;
+	}
+	}
