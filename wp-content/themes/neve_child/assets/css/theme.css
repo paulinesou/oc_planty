@@ -1,7 +1,116 @@
+/* Mise en page du bouton formulaire page "nous rencontrer" */
 .button-contact{
     text-align: center;
 }
 
+#envoyer{
+	height: 55px;
+	width: 198px;
+}
+
+#envoyer:hover{
+	background-color: #c02e43;
+}
+
 .wpcf7-spinner{
     display: none;
+}
+
+/* Mise en page du selecteur page "commander" */
+
+input[type=number] {
+  width : 51px;
+  height : 54px;
+}
+
+.selecteur p {
+	margin: 0;
+}
+
+.selecteur br{
+	display: none;
+}
+
+input[placeholder] {
+  text-align : center;
+}
+
+.bouton {
+  width : 31px;
+}
+
+.selecteur{
+  display : flex;
+}
+
+.bouton input[type=submit] {
+	height: 27px;
+	background-color:#DC9F96;;
+}
+
+.bouton input[type=submit]:hover{
+	background-color: #DC9F96;
+}
+
+#zero{
+	border-radius: 5px 0px 0px 5px;
+
+}
+
+#plus {
+	border-radius: 0px 5px 0px 0px;
+	border-bottom: solid 2px white;
+}
+
+#moins{
+	border-radius: 0px 0px 5px 0px;
+}
+
+/* Mise en page du formulaire page "commander" */
+#formulaire-responsive {
+	max-width:600px;
+	margin:0 auto;
+        width:100%;
+}
+.rang-form {
+	width: 100%;
+}
+.demi-colonne, .colonne {
+	float: left;
+	position: relative;
+	padding: 0.65rem;
+	width:100%; /*a voir si on laisse ce paramètre */
+	color: white;
+}
+
+.colonne{
+	text-align: center;
+}
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
+	display: flex;
+	width: 380px;
+	padding: 8px;
+	border-radius: 7px;
+}
+
+.colonne input[type=submit]{
+	height: 55px;
+	width: 198px;
+}
+.colonne input[type=submit]:hover{
+	background-color: #c02e43;
+}
+
+/**---------------- Media query formulaire page "commander" ----------------**/
+@media only screen and (min-width: 48em) { 
+	.demi-colonne {
+		width: 50%;
+	}
 }
