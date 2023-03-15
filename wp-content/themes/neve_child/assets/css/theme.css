@@ -1,7 +1,32 @@
-/* Mise en page de mon onglet Admin */
+/* Mise en page menu de navigation */
+
+.menu-item-443:hover, .admin:hover{
+	font-weight:700;
+}
+
+body .nav-ul > li {
+	margin: 0;
+  	padding: 0 calc(var(--spacing)/ 2);
+}
+
+#menu-item-477 > a{
+	color: white;
+}
+
 .menu-item-477{
 	order: 3;
+	background-color: #DC9F96;
+	font-weight: 700;
 }
+
+.menu-item-477:hover{
+	background-color:#c02e43;
+}
+
+.builder-item, .has-nav{
+	margin: 0px!important;
+}
+
 
 /* Mise en page du bouton formulaire page "nous rencontrer" */
 .button-contact{
@@ -21,6 +46,10 @@
     display: none;
 }
 
+/* input[type=text]{
+	width: 100%;
+} */
+
 /* Mise en page du selecteur page "commander" */
 
 input[type=number] {
@@ -29,9 +58,9 @@ input[type=number] {
 }
 
 /* Firefox */
-input[type=number] {
-    -moz-appearance: textfield;
-}
+/* input[type=number] {
+    -moz-appearance: none;
+} */
  
 /* Chrome */
 input::-webkit-inner-spin-button,
@@ -69,7 +98,9 @@ input[placeholder] {
 
 .bouton input[type=submit] {
 	height: 27px;
-	background-color:#DC9F96;;
+	background-color:#DC9F96;
+	line-height: 28px;
+	padding-top: 0px;
 }
 
 .bouton input[type=submit]:hover{
@@ -84,6 +115,7 @@ input[placeholder] {
 .plus{
 	border-radius: 0px 5px 0px 0px !important;
 	border-bottom: solid 2px white !important;
+	text-align: center;
 }
 
 .moins{
@@ -93,15 +125,13 @@ input[placeholder] {
 
 /* Mise en page du formulaire page "commander" */
 
-/* #formulaire-responsive {
-	max-width:600px;
-	margin:0 auto;
-        width:100%;
-} */
 
 .rang-form {
+	display: flex;
+	gap: 90px;
 	width: 100%;
 }
+
 .demi-colonne, .colonne {
 	display: flex;
 	justify-content: center;
@@ -121,10 +151,18 @@ input[placeholder] {
 	clear: both;
 }
 
-.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
+.wpcf7 input[type="text"], .wpcf7 input[type="email"] {
 	display: flex;
 	height: 70px;
-	width: 380px;
+	width: 100%;
+	padding: 8px;
+	border-radius: 7px;
+}
+
+.wpcf7 textarea{
+	display: flex;
+	height: 230px;
+	width: 100%;
 	padding: 8px;
 	border-radius: 7px;
 }
@@ -137,17 +175,41 @@ input[placeholder] {
 	background-color: #c02e43;
 }
 
+.vertical-line{
+    border: 1px solid white;
+    display: flex;
+    height: 435px;
+	position: absolute;
+	left: 50%;
+	top: -12%;
+}
+
 /* Media query formulaire page "commander" */
-@media only screen and (min-width: 48em) { 
-	.demi-colonne {
-		width: 50%;
+
+@media screen and (max-width: 650px) {
+	.vertical-line{
+		display: none;
+	}
+
+	.rang-form{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.bouton input[type="submit"]{
+		line-height: 24px;
 	}
 }
 
-/* Média query global */
-@media screen and (max-width: 1000px) {
-	.elementor-column-gap-default{
-		display: flex;
-		flex-direction: column;
-	}
-	}
+/* Footer */
+
+.component-wrap p{
+	color: white;
+}
+
+.component-wrap p a{
+	color: white;
+}
+
+
