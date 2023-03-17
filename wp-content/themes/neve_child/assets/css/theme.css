@@ -27,6 +27,9 @@ body .nav-ul > li {
 	margin: 0px!important;
 }
 
+.admin a{
+	width: 50px;
+}
 
 /* Mise en page du bouton formulaire page "nous rencontrer" */
 .button-contact{
@@ -45,10 +48,6 @@ body .nav-ul > li {
 .wpcf7-spinner{
     display: none;
 }
-
-/* input[type=text]{
-	width: 100%;
-} */
 
 /* Mise en page du selecteur page "commander" */
 
@@ -90,6 +89,7 @@ input[placeholder] {
 
 .bouton {
   width : 31px;
+  line-height: 27px;
 }
 
 .selecteur{
@@ -125,6 +125,10 @@ input[placeholder] {
 
 /* Mise en page du formulaire page "commander" */
 
+#formulaire-commande{
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
 .rang-form {
 	display: flex;
@@ -184,9 +188,9 @@ input[placeholder] {
 	top: -12%;
 }
 
-/* Media query formulaire page "commander" */
+/* Media query */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
 	.vertical-line{
 		display: none;
 	}
@@ -196,11 +200,15 @@ input[placeholder] {
 		flex-direction: column;
 		gap: 10px;
 	}
+}
 
-	.bouton input[type="submit"]{
-		line-height: 24px;
+@media (max-width: 1024px) {
+	.elementor-align-justify .elementor-button{
+		width: 95%;
+		margin-left: 10px;
 	}
 }
+
 
 /* Footer */
 
